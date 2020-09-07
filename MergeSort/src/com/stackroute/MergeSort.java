@@ -4,8 +4,8 @@ public class MergeSort {
     /* Main method to call mergeSort*/
     public static void main(String args[]) {
         int arr[] = {40, 51, 22, 45, 1, 4, 90, 23, 17, 55};
-        MergeSort obj1 = new MergeSort();
-        obj1.sort(arr, 0, arr.length - 1);
+        MergeSort objOne = new MergeSort();
+        objOne.sort(arr, 0, arr.length - 1);
         System.out.println("Sorted array");
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i] + "");
@@ -16,31 +16,31 @@ public class MergeSort {
     void merge(int arr[], int beg, int mid, int end) {
         int left = mid - beg + 1;
         int right = end - mid;
-        int LeftArray[] = new int[left];
-        int RightArray[] = new int[right];
+        int leftArray[] = new int[left];
+        int rightArray[] = new int[right];
         for (int i = 0; i < left; ++i)
-            LeftArray[i] = arr[beg + i];
+            leftArray[i] = arr[beg + i];
         for (int j = 0; j < right; ++j)
-            RightArray[j] = arr[mid + 1 + j];
+            rightArray[j] = arr[mid + 1 + j];
         int i = 0, j = 0;
         int k = beg;
         while (i < left && j < right) {
-            if (LeftArray[i] <= RightArray[j]) {
-                arr[k] = LeftArray[i];
+            if (leftArray[i] <= rightArray[j]) {
+                arr[k] = leftArray[i];
                 i++;
             } else {
-                arr[k] = RightArray[j];
+                arr[k] = rightArray[j];
                 j++;
             }
             k++;
         }
         while (i < left) {
-            arr[k] = LeftArray[i];
+            arr[k] = leftArray[i];
             i++;
             k++;
         }
         while (j < right) {
-            arr[k] = RightArray[j];
+            arr[k] = rightArray[j];
             j++;
             k++;
         }
