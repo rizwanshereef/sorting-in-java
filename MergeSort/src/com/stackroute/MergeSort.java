@@ -1,7 +1,7 @@
 package com.stackroute;
 
 public class MergeSort {
-/* Main method to call mergeSort*/
+    /* Main method to call mergeSort*/
     public static void main(String args[]) {
         int arr[] = {40, 51, 22, 45, 1, 4, 90, 23, 17, 55};
         MergeSort obj1 = new MergeSort();
